@@ -7,7 +7,6 @@ type Users = Array<{ id: number; fullName: string; email: string }>
 
 type HomePageProps = { users: Users }
 export default function HomePage({ users }: HomePageProps) {
-  const [searchValue, setSearchValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
   const searchHandler = useDebouncedCallback((query: string) => {
